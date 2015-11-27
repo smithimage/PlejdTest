@@ -14,10 +14,10 @@ namespace PlejdTest
     public class RangeSliderView : View, IRangeSlider 
     {
         //TODO
-        //Implementer RangeSliderView. 
+        //Implementera RangeSliderView. 
         //Slidern ska ha en knopp för selectedMinimum och en knopp för selectedMaximum.
-        //Det är inget krav på att den ska vara implementerad i forms utan får gärna vara implementerad med renderers i
-        //någon av platformarna Android eller iOS.
+        //Det är inget krav på att den ska vara implementerad i forms utan får gärna vara
+        //implementerad med renderers i någon av platformarna Android eller iOS.
         //Lägg in den nya slider någonstans i TestPage eller ersätt den gamla.
 
         #region IRangeSlider implementation
