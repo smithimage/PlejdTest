@@ -16,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)RangeSlider\RangeSlider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RangeSlider\RangeSliderView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RangeSlider\IRangeSlider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RangeSlider\Robert\RobertRangeSlider.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)TestPage.xaml">
@@ -24,5 +25,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)RangeSlider\" />
+    <Folder Include="$(MSBuildThisFileDirectory)RangeSlider\Robert\" />
   </ItemGroup>
 </Project>

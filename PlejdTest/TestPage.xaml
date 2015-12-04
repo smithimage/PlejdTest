@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="PlejdTest.TestPage"
-	Title="Plejd Test">
+	Title="Plejd Test"
+	xmlns:local="clr-namespace:PlejdTest.Robert;">
 	<ContentPage.Content>
 	<StackLayout
 			Orientation="Vertical"
@@ -10,9 +11,12 @@
 			HorizontalOptions="FillAndExpand"
 			Padding="25,0,25,0"
 			Spacing="10">
-			<Slider x:Name="RegularSlider"
+			<local:RobertRangeSlider x:Name="RobertSlider" HeightRequest="30" 
+				Minimum="0" Maximum="200" SelectedMinimum="0" SelectedMaximum="200"
+				RailColor="Gray" TraceColor="#00c6ff" KnobColor="White" KnobBorder="#00c6ff" />
+				<!--Slider x:Name="RegularSlider"
 				HorizontalOptions="FillAndExpand"
-				VerticalOptions="Center"  />
+				VerticalOptions="Center"  /-->
 			<Label
 							 Text="Min"
 							 Font="Avenir-Medium" 
@@ -27,6 +31,7 @@
 				Spacing="15">
 						<Button 
 							 x:Name="MinMinusButton" 
+							 Clicked="DecreaseMinimum"
 							 Text="-"
 							 Font="Avenir-Medium" 
 							 FontSize="25"
@@ -38,7 +43,8 @@
 							 />
 						 <Label
 							 x:Name="MinCurrentValue" 
-							 Text="12"
+							 BindingContext="{x:Reference RobertSlider}"
+							 Text="{Binding Path=SelectedMinimum}"
 							 Font="Avenir-Medium" 
 							 FontSize="20"
 							 HorizontalOptions="FillAndExpand"
@@ -46,6 +52,7 @@
 							 YAlign="Center"/>
 						<Button 
 							 x:Name="MinPlusButton" 
+							 Clicked="IncreaseMinimum"
 							 Text="+"
 							 Font="Avenir-Medium" 
 							 FontSize="25"
@@ -69,6 +76,7 @@
 				Spacing="15">
 						<Button 
 							 x:Name="MaxMinusButton" 
+							 Clicked="DecreaseMaximum"
 							 Text="-"
 							 Font="Avenir-Medium" 
 							 FontSize="25"
@@ -80,7 +88,8 @@
 							 />
 						 <Label
 							 x:Name="MaxCurrentValue" 
-							 Text="12"
+							 BindingContext="{x:Reference RobertSlider}"
+							 Text="{Binding Path=SelectedMaximum}"
 							 Font="Avenir-Medium" 
 							 FontSize="20"
 							 HorizontalOptions="FillAndExpand"
@@ -88,6 +97,7 @@
 							 YAlign="Center"/>
 						<Button 
 							 x:Name="MaxPlusButton" 
+							 Clicked="IncreaseMaximum"
 							 Text="+"
 							 Font="Avenir-Medium" 
 							 FontSize="25"
