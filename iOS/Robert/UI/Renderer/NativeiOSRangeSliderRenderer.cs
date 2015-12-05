@@ -15,18 +15,13 @@ namespace PlejdTest.iOS.Robert.UI.Renderer
 		{
 			base.OnElementPropertyChanged (sender, e);
 
-			//var element = ((IElementController)Element);
 			if (e.PropertyName == RobertRangeSlider.MaximumProperty.PropertyName) {								
-				//element.SetValueFromRenderer (RobertRangeSlider.MaximumProperty, Element.Maximum);
 				Control.Maximum = Element.Maximum;
 			} else if (e.PropertyName == RobertRangeSlider.MinimumProperty.PropertyName) {
-				//element.SetValueFromRenderer (RobertRangeSlider.MinimumProperty, Element.Minimum);
 				Control.Minimum = Element.Minimum;
 			} else if (e.PropertyName == RobertRangeSlider.SelectedMaximumProperty.PropertyName) {
-				//element.SetValueFromRenderer (RobertRangeSlider.SelectedMaximumProperty, Element.SelectedMaximum);
 				Control.SelectedMaximum = Element.SelectedMaximum;
 			}else if (e.PropertyName == RobertRangeSlider.SelectedMinimumProperty.PropertyName) {
-				//element.SetValueFromRenderer (RobertRangeSlider.SelectedMinimumProperty, Element.SelectedMinimum);
 				Control.SelectedMinimum = Element.SelectedMinimum;
 			}
 		}
@@ -35,16 +30,12 @@ namespace PlejdTest.iOS.Robert.UI.Renderer
 		{			
 			var element = ((IElementController)Element);
 			if (e.PropertyName == RobertRangeSlider.MaximumProperty.PropertyName) {				
-				//element.SetValueFromRenderer (RobertRangeSlider.MinimumProperty, Control.Minimum);
 				Element.Maximum = (float)Control.Maximum;
 			} else if (e.PropertyName == RobertRangeSlider.MinimumProperty.PropertyName) {
-				//element.SetValueFromRenderer (RobertRangeSlider.MinimumProperty, Control.Minimum);
 				Element.Minimum = (float)Control.Minimum;
 			} else if (e.PropertyName == RobertRangeSlider.SelectedMaximumProperty.PropertyName) {
-				//element.SetValueFromRenderer (RobertRangeSlider.SelectedMaximumProperty, Control.SelectedMaximum);
 				Element.SelectedMaximum = (float)Control.SelectedMaximum;
 			}else if (e.PropertyName == RobertRangeSlider.SelectedMinimumProperty.PropertyName) {
-				//element.SetValueFromRenderer (RobertRangeSlider.SelectedMinimumProperty, Control.SelectedMinimum);
 				Element.SelectedMinimum = (float)Control.SelectedMinimum;
 			}
 		}
